@@ -1,0 +1,45 @@
+button,
+input{
+    border-radius: 0;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    background: none;
+    font-family: $font-text-alt;
+}
+button.site-button,
+input.site-button,
+a.site-button{
+    border-radius: 0;
+    border: 0;
+    background-color: $color-primary;
+    color: white;
+    padding: .5rem 1rem;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 1px;
+    display: inline-block;
+    border: 1px solid transparent;
+    font-family: $font-text-alt;
+    transition: background .25s ease-in-out, color .25s ease-in-out;
+    &:hover{
+        background: #eee;
+        color: $color-primary;
+    }
+    @media #{$bp-sm} {
+        padding: .75rem 1.5rem;
+    }
+    &-alt{
+        background: white;
+        color: $color-grey-dark;
+        border-color: $color-grey-dark;
+        &:hover{
+            background: black;
+            color: white;
+        }
+    }
+}

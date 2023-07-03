@@ -1,0 +1,46 @@
+.site-contact{
+    .site-tiles{
+        &:before{
+            display: none;
+        }
+        .site-tile{
+            .site-tile-content{
+                h3{
+                    font-size: 2rem;
+                    font-family: $font-heading;
+                }
+                p{
+                    margin: .25rem;
+                    a{
+                        color: $color-primary;
+                        text-decoration: none;
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+            .site-map{
+                .site-map-google{
+                    height: 100%;
+                }
+            }
+            &:nth-of-type(even){
+                .site-tile-content{
+                    background: white;
+                    color: $color-text;
+                    &:before{
+                        border-color: white transparent transparent transparent;
+                    }
+                }
+                @media #{$bp-sm} {
+                    .site-tile-content{
+                        &:before{
+                            border-color: transparent white transparent transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

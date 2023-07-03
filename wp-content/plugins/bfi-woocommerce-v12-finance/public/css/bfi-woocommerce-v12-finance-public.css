@@ -1,0 +1,41 @@
+/**
+ * V12 CSS
+ */
+
+ .required {
+ 	color: #96588A;
+ }
+
+#payment .payment_methods .payment_box.payment_method_v12retailfinance label {
+ 	font-weight: bold;
+ 	text-transform: uppercase;margin: 0 10px 10px 0;font-size: 1.1em;
+}
+
+#v12-product-desc,
+#v12-product-desc p,
+#payment .payment_methods .payment_box.payment_method_v12retailfinance p {
+ 	margin: .7em 0;
+}
+
+select#v12-finance-option {
+	padding: 6px;
+}
+
+#v12-deposit-amount, #v12-finance-option {
+    padding: 6px;
+    border: 1px solid #DCDCDC;
+    box-shadow: none;
+}
+
+#v12-deposit-amount {
+	    padding: 7px;
+}
+
+table {
+	background: #fff;
+	border: 2px solid #EAEAEA;
+}
+
+table tbody td {
+	background: rgba(0, 0, 0, 0.03);
+}

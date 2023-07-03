@@ -1,0 +1,146 @@
+.site-newarrivals{
+    padding: 3rem 1rem;
+    max-width: 1280px;
+    margin: auto;
+    @media #{$bp-sm} {
+        display: flex;
+        align-items: center;
+    }
+    .site-newarrivals-intro{
+        text-align: center;
+        padding: 0 1rem;
+        @media #{$bp-sm} {
+            text-align: left;
+            min-width: 250px;
+            width: 250px;
+        }
+        @media #{$bp-xxlg} {
+            min-width: 300px;
+            width: 300px;
+        }
+        h2.site-title{
+            font-size: 2.25rem;
+            @media #{$bp-md} {
+                font-size: 2.75rem;
+            }
+            @media #{$bp-xxlg} {
+                font-size: 2.75rem;
+            }
+        }
+    }
+    .site-newarrivals-list{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: auto;
+        max-width: 1280px;
+        text-align: center;
+        overflow: hidden;
+        transition: height .25s ease-in-out;
+        .site-newarrivals-item{
+            width: calc(100% - 2rem);
+            margin: 0 1rem;
+            a.site-newarrivals-image{
+                display: block;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                height: 200px;
+                max-width: 200px;
+                margin: auto;
+            }
+            p{
+                margin: 0;
+                &.site-newarrivals-model{
+                    font-family: $font-text-alt;
+                    font-weight: 400;
+                    font-size: 1.25rem;
+                    letter-spacing: 2px;
+                }
+                &.site-newarrivals-price{
+                    color: $color-primary;
+                    font-size: 2.75rem;
+                    font-family: $font-text-alt;
+                    span{
+                        font-size: 1.25rem;
+                        &:last-of-type{
+                            display: block;
+                            color: $color-grey-dark;
+                            text-transform: uppercase;
+                            font-size: .9rem;
+                            font-family: $font-text;
+                            font-weight: 400;
+                            font-family: $font-text;
+                        }
+                    }
+                }
+            }
+            .site-newarrivals-finishes{
+                display: flex;
+                list-style: none;
+                padding: 0;
+                margin: 1rem 0;
+                align-items: center;
+                justify-content: center;
+                li{
+                    width: 25px;
+                    height: 25px;
+                    margin: 0 .15rem;
+                    &:first-of-type{
+                        width: auto;
+                        line-height: 25px;
+                        height: auto;
+                        padding-right: .5rem;
+                    }
+                }
+            }
+            a.site-button{
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+    .site-newarrivals-arrows{
+        position: relative;
+        margin: 2rem 0;
+        display: none;
+        @media #{$bp-sm} {
+            display: flex;
+            align-items: center;
+        }
+        &-mobile{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @media #{$bp-sm} {
+                display: none;
+            }
+        }
+        span{
+            display: inline-block;
+            width: 1px;
+            height: 50px;
+            margin: 0 1.5rem;
+            background: $color-grey-dark;
+        }
+        button{
+            display: inline-block;
+            background-size: 20px 30px;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 20px;
+            height: 30px;
+            transition: .25s opacity ease-in-out;
+            cursor: pointer;
+            &.site-newarrivals-prev{
+                background-image: url('../images/ui/arrow-left.svg');
+            }
+            &.site-newarrivals-next{
+                background-image: url('../images/ui/arrow-right.svg');
+            }
+            &:hover{
+                opacity: .75;
+            }
+        }
+    }
+}

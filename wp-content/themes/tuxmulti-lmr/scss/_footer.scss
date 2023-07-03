@@ -1,0 +1,111 @@
+.site-footer{
+    background: $color-secondary;
+    font-size: .9rem;
+    .site-footer-inner{
+        max-width: 1280px;
+        margin: auto;
+        text-align: center;
+        padding: 2rem 2rem 4rem;
+        color: white;
+        @media #{$bp-sm} {
+            display: flex;
+            text-align: left;
+        }
+    }
+    .site-footer-left{
+        @media #{$bp-sm} {
+            flex: 1;
+        }
+    }
+    .site-footer-title{
+        font-size: 1.5rem;
+    }
+    .site-social{
+        list-style: none;
+        padding: 0;
+        margin: 2rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media #{$bp-sm} {
+            justify-content: flex-start;
+        }
+        li{
+            margin: 0 .5rem;
+            a{
+                display: block;
+                background-color: transparent;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 26px;
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                border: 3px solid $color-primary;
+                transition: border-color .25s ease-in-out;
+                &:hover{
+                    border-color: darken($color-primary, 25%);
+                }
+                &.facebook{
+                    background-image: url('../images/social/facebook.svg');
+                }
+                &.instagram{
+                    background-image: url('../images/social/instagram.svg');
+                }
+                &.twitter{
+                    background-image: url('../images/social/twitter.svg');
+                }
+                &.youtube{
+                    background-image: url('../images/social/youtube.svg');
+                }
+            }
+        }
+    }
+    .site-links{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        @media #{$bp-sm} {
+            justify-content: flex-start;
+        }
+        li{
+            a{
+                color: white;
+                text-decoration: none;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+            &:after{
+                content: '|';
+                margin: 0 .5rem;
+            }
+            &:last-of-type{
+                &:after{
+                    display: none;
+                }
+            }
+        }
+    }
+    .site-info{
+        margin: 2rem 0;
+        p{
+            margin: 0;
+            &.site-info-bold{
+                font-weight: bold;
+                font-size: 1.2em;
+            }
+            a{
+                color: white;
+                text-decoration: none;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,189 @@
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #444;
+}
+::-moz-placeholder { /* Firefox 19+ */
+    color: #444;
+}
+:-ms-input-placeholder { /* IE 10+ */
+    color: #444;
+}
+:-moz-placeholder { /* Firefox 18- */
+    color: #444;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea{
+    font-family: $font-text;
+    color: #444;
+    &:focus{
+        color: #444;
+    }
+}
+
+select{
+    width: 100%;
+    text-transform: uppercase;
+}
+.selectric-hover,
+.selectric-open,
+.selectric-focus{
+    .selectric {
+        border-color: white;
+        .button{
+            background-color: darken(white, 15%);
+        }
+    }
+}
+.selectric-open{
+    .selectric {
+        .button{
+            &:after{
+                transform: rotate(90deg);
+            }
+        }
+    }
+}
+.selectric {
+    border: 1px solid white;
+    .label{
+        margin: 0;
+        padding: 0 calc(44px + 1rem) 0 1rem;
+        font-size: 15px;
+        line-height: 44px;
+        color: white;
+        height: 44px;
+        background: $color-grey-dark;
+        letter-spacing: 1px;
+    }
+    .button{
+        background-color: white;
+        width: 44px;
+        height: 44px;
+        line-height: 44px;
+        color: $color-primary;
+        transition: background .25s ease-in-out;
+        &:after{
+            border: 0;
+            width: 44px;
+            height: 44px;
+            background-image: url('../images/ui/dropdown-dark.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 20px;
+            transition: background .25s ease-in-out;
+        }
+    }
+    &-site-wheels-filters-colours{
+        .label{
+            &:before{
+                content: 'Colour: ';
+            }
+        }
+    }
+    &-site-wheels-filters-products{
+        .label{
+            &:before{
+                content: 'Products: ';
+            }
+        }
+    }
+    &-site-wheels-filters-range{
+        .label{
+            &:before{
+                content: 'Price Range: ';
+            }
+        }
+    }
+    &-site-wheels-filters-sortby{
+        .label{
+            &:before{
+                content: 'Sort by: ';
+            }
+        }
+    }
+}
+.selectric-items {
+    width: 100%;
+    border: 1px solid white;
+    border-top: 0;
+    li{
+        margin: 0;
+        padding: 1rem;
+        color: white;
+        font-size: 15px;
+        background: $color-grey-dark;
+    }
+    li:hover{
+        background: darken($color-grey-light, 10%);
+    }
+    li.highlighted,
+    li.selected{
+        background: $color-grey-light;
+    }
+}
+
+.checkbox{
+    position: relative;
+    display: block;
+    height: 40px;
+    padding-left: 50px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    input{
+        position: absolute;
+        opacity: 0;
+        &:checked  {
+            ~ .checkmark{
+                opacity: 1;
+                border-color: $color-primary;
+                &:after {
+                    display: block;
+                }
+            }
+            ~ .checkmark-text{
+                opacity: 1;
+            }
+        }
+    }
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 40px;
+        width: 40px;
+        background: white;
+        border: 1px solid #777;
+        &:after {
+            content: "";
+            position: absolute;
+            display: none;
+            left: 11px;
+            top: 6px;
+            width: 15px;
+            height: 20px;
+            border: solid $color-primary;
+            border-width: 0 6px 6px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+    }
+    .checkmark-text{
+        letter-spacing: 1px;
+    }
+}

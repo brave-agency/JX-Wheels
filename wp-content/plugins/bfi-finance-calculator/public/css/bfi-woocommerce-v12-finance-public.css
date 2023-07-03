@@ -1,0 +1,186 @@
+/**
+ * V12 CSS
+ */
+
+ 
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+ 
+#finance-option-container {
+    background: #E9E8E8 none repeat scroll 0% 0%;
+    padding: 1.5em;
+    margin-bottom: 2em;
+} 
+
+.finance-option {
+    float: left;
+    width: 49%;
+}
+
+.finance-option.last {
+    margin-left: 2%;
+	padding-left: 4%;
+	border-left: 1px solid #e1e1e1;
+}
+
+.finance-option h6 {
+    font-size: 1.4em;
+    margin: 0px 0px 1em;
+}
+
+.finance-option h6 span {
+    margin: 0px 0.5em 0 0;
+}
+
+.finance-option label {
+    width: 100%;
+    display: block;
+    margin: 0px 0px 0.8em;
+    font-size: 1em;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.finance-option .input input {
+	padding: 0.9em 1em;
+	width: 70%;
+}
+
+
+.finance-option .input select {
+	width: 90%;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	background: #fff url(../images/select-arrow.gif) no-repeat 96% center;
+	border-radius: 0;
+	padding: 0.6em 1em;
+}
+
+.required,
+.finance-option h6 span {
+  color: #0E8638;
+}
+
+p.small-print {
+    margin: 1.2em 0 0 0;
+    font-size: 0.85em;
+}
+
+#payment .payment_methods .payment_box.payment_method_v12retailfinance label {
+ 	font-weight: bold;
+ 	text-transform: uppercase;margin: 0 10px 10px 0;font-size: 1.1em;
+}
+
+#v12-product-desc,
+#v12-product-desc p,
+#payment .payment_methods .payment_box.payment_method_v12retailfinance p {
+ 	margin: .7em 0;
+}
+
+#v12-deposit-amount, #v12-finance-option {
+    border: 1px solid #DCDCDC;
+    box-shadow: none;
+}
+
+#v12-product-desc {
+    margin: 2em 0px 1.5em;
+}
+
+table {
+	border: none;
+}
+
+table tbody td {
+	background: none;
+}
+
+table tbody tr.even td {
+	background: #f0f0f0;
+}
+
+#order_review table tbody tr:nth-child(2n) td {
+	background: #fff;
+}
+
+select#v12-finance-option {
+    padding: 0.5em;
+}
+
+input#v12-deposit-amount {
+    width: 38%;
+    padding: 0.9em;
+}
+
+
+/* ==== Media Queries */
+
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {
+
+	.finance-option h6 {
+    	font-size: 1.3em;
+    	margin: 0px 0px 0.5em;
+    	line-height: 1.5em;
+	}
+
+	.finance-option h6 span {
+    	display: block;
+	}
+	
+	.finance-option .input input {
+    	width: 68%;
+	}
+	
+	.finance-option .input select {
+    	width: 97%;
+    	padding: 0.9em 1em;
+	}
+	
+	.finance-option .input button {
+    	padding: 0.9em 1em;
+	}
+
+	p.small-print {
+    	font-size: 0.8em;
+	}
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+
+	.finance-option {
+    	width: 100%;
+	}
+
+	.finance-option.last {
+    	margin-left: 0;
+    	padding-left: 0;
+    	border-left: none;
+    	margin-top: 2em;
+	}
+	
+	.finance-option h6 {
+    	font-size: 1.1em;
+    	margin: 0px 0px 1em;
+    	border-bottom: 1px solid #999;
+    	padding-bottom: 1em;
+	}
+	
+	.finance-option .input input,
+	.finance-option .input select {
+    	width: 100%;
+	}
+	
+	.finance-option .input button {
+    	width: 100%;
+    	margin-top: 0.5em;
+	}
+
+}
+

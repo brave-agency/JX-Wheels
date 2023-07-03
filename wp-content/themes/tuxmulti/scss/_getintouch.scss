@@ -1,0 +1,162 @@
+.site-getintouch{
+    text-align: center;
+    padding: 2rem 1rem;
+    background: $color-grey-dark;
+    position: relative;
+    &:before{
+        opacity: .65;
+        content: '';
+        background: url('../images/ui/triangle.svg') center no-repeat;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    h2.site-getintouch-title{
+        position: relative;
+        text-transform: uppercase;
+        color: white;
+    }
+    .wpcf7{
+        max-width: 500px;
+        margin: 3rem auto;
+        ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            color: white;
+        }
+        ::-moz-placeholder { /* Firefox 19+ */
+            color: white;
+        }
+        :-ms-input-placeholder { /* IE 10+ */
+            color: white;
+        }
+        :-moz-placeholder { /* Firefox 18- */
+            color: white;
+        }
+        .wpcf7-group{
+            @media #{$bp-xs} {
+                display: flex;
+                label + label input{
+                    border-left: 0;
+                }
+            }
+        }
+        form{
+            position: relative;
+        }
+        p{
+            margin: 0;
+        }
+        .selectric,
+        .selectric .label{
+            background: none;
+            color: white;
+        }
+        input,
+        select,
+        textarea{
+            position: relative;
+            margin-top: -1px;
+            background: none;
+            width: 100%;
+            border: 1px solid red;
+            border-radius: 0 !important;
+            padding: 1rem;
+            text-align: center;
+            text-transform: uppercase;
+            color: white;
+            display:inline-block;
+            letter-spacing: 1px;
+            vertical-align:middle;
+            transition: padding .25s ease-in-out;
+            border-color: white;
+            &.wpcf7-not-valid{
+                padding: .5rem 1rem 1.5rem;
+            }
+        }
+        select{
+            height: 54px;
+            -webkit-appearance: none;
+            text-align-last: center;
+            padding-right: 29px;
+        }
+        input.wpcf7-submit{
+            border-radius: 0;
+            border: 0;
+            background-color: $color-primary;
+            color: white;
+            padding: 1rem;
+            font: inherit;
+            cursor: pointer;
+            outline: inherit;
+            text-transform: uppercase;
+            text-align: center;
+            text-decoration: none;
+            letter-spacing: 1px;
+            display: block;
+            max-width: 100%;
+            margin: auto;
+            margin-top: 1rem;
+            transition: background .25s ease-in-out, color .25s ease-in-out;
+            &:hover{
+                background: #eee;
+                color: $color-primary;
+            }
+            @media #{$bp-sm} {
+                padding: .75rem 1.5rem;
+            }
+        }
+        .wpcf7-form-control-wrap{
+            position: relative;
+            display: block;
+            transition: padding .25s ease-in-out;
+            .wpcf7-recaptcha ~ .wpcf7-not-valid-tip {
+                padding-right: 70px;
+            }
+        }
+        .wpcf7-not-valid-tip{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            text-align: center;
+            font-size: .85rem;
+            margin: .25rem .5rem;
+            color: red;
+        }
+        .ajax-loader{
+            display: none;
+        }
+        .wpcf7-recaptcha {
+            > div{
+                margin: 1.5rem auto;
+            }
+        }
+        div.wpcf7-response-output{
+            position: relative;
+            top: 100%;
+            margin: 1rem 0 1.5rem;
+            padding: 0.5rem 1rem;
+        }
+        div.wpcf7-mail-sent-ng,
+        div.wpcf7-aborted,
+        div.wpcf7-spam-blocked,
+        div.wpcf7-validation-errors,
+        div.wpcf7-acceptance-missing{
+            color: white;
+            border: 1px solid #ff0000;
+        }
+        div.wpcf7-validation-success{
+            color: green;
+            border: 1px solid green;
+        }
+    }
+    #server-messages,
+    #alert-message-container,
+    .smtw-submit-feedback,
+    #smtw-entry-form{
+        position: relative;
+        color: white;
+    }
+}

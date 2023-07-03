@@ -1,0 +1,267 @@
+#show-me-the-wheels.site-sendyourimages{
+    text-align: center;
+    padding: 2rem;
+    background: $color-grey-dark;
+    position: relative;
+    &:before{
+        opacity: .65;
+        content: '';
+        background: url('../images/ui/triangle.svg') center no-repeat;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    h2.site-sendyourimages-title{
+        position: relative;
+        text-transform: uppercase;
+        color: white;
+    }
+    #server-messages{
+        max-width: 500px;
+        margin: 3rem auto;
+        .alert-message-container{
+            padding: 1rem;
+            .alert-message-title{
+                margin: 0;
+                text-transform: uppercase;
+                font-weight: normal;
+                &:before{
+                    display: none;
+                }
+            }
+        }
+    }
+    .smtw-submit-feedback{
+        max-width: 500px;
+        margin: 3rem auto;
+        padding: 1rem;
+        border-radius: 0;
+        background: green;
+        position: relative;
+        h4{
+            margin: 0;
+            text-transform: uppercase;
+            &:before{
+                display: none;
+            }
+        }
+        p{
+            margin: 0;
+        }
+    }
+    #smtw-entry-form{
+        max-width: 500px;
+        position: relative;
+        margin: 3rem auto;
+        color: white;
+        ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            color: white;
+        }
+        ::-moz-placeholder { /* Firefox 19+ */
+            color: white;
+        }
+        :-ms-input-placeholder { /* IE 10+ */
+            color: white;
+        }
+        :-moz-placeholder { /* Firefox 18- */
+            color: white;
+        }
+        .form-wrapper{
+            margin: 3rem 0;
+            @media #{$bp-xs} {
+                display: flex;
+                flex-wrap: wrap;
+                .form-group:nth-of-type(2) input{
+                    border-left: 0;
+                }
+                .form-group{
+                    width: 50%;
+                    &:nth-of-type(2) input{
+                        border-left: 0;
+                    }
+                    &:nth-of-type(3),
+                    &:nth-of-type(4){
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .form-group{
+            position: relative;
+            &.has-error{
+                .form-control{
+                    padding: .5rem 1rem 1.5rem;
+                }
+                .help-block{
+                    position: absolute;
+                    bottom: .25rem;
+                    left: 0;
+                    font-size: 11px;
+                    color: red;
+                    width: 100%;
+                }
+            }
+            label.control-label{
+                display: none;
+            }
+            input.form-control{
+                transition: padding .25s ease-in-out;
+            }
+            input,
+            select,
+            textarea{
+                position: relative;
+                margin-top: -1px;
+                background: none;
+                width: 100%;
+                border: 1px solid red;
+                border-radius: 0 !important;
+                padding: 1rem;
+                text-align: center;
+                text-transform: uppercase;
+                color: white;
+                display:inline-block;
+                letter-spacing: 1px;
+                vertical-align:middle;
+                transition: padding .25s ease-in-out;
+                border-color: white;
+                &.wpcf7-not-valid{
+                    padding: .5rem 1rem 1.5rem;
+                }
+            }
+            #image-uploader{
+                padding: 0;
+                .image-uploader-wrapper{
+                    margin: 2rem 0 0;
+                    .image-upload-ui-wrapper{
+                        border: 0;
+                        padding: 0;
+                        &.error{
+                            .image-upload-ui-left{
+                                .image-upload-label{
+                                    background-color: #cb7535;
+                                    &:hover{
+                                        background: darken(#cb7535, 5%);
+                                    }
+                                }
+                            }
+                        }
+                        .error-message{
+                            margin-bottom: 1.5rem;
+                        }
+                        .image-upload-ui-left,
+                        .image-upload-ui-right{
+                            float: none;
+                            .image-upload-label,
+                            button.remove-image{
+                                background-color: black;
+                                padding: 1rem 2rem;
+                                display: inline-block;
+                                border-radius: 0;
+                                width: 100%;
+                                max-width: 500px;
+                                transition: background .25s ease-in-out;
+                                cursor: pointer;
+                                margin: 0 0 1rem;
+                                &:hover{
+                                    background: darken($color-primary, 7.5%);
+                                }
+                                &:before{
+                                    position: relative;
+                                    display: inline-block;
+                                    content: '';
+                                    background-image: url('../images/ui/upload.svg');
+                                    background-size: 15px;
+                                    background-repeat: no-repeat;
+                                    background-position: center;
+                                    width: 15px;
+                                    height: 15px;
+                                    top: 2px;
+                                    margin-right: 1rem;
+                                }
+                                @media #{$bp-xs} {
+                                    width: auto;
+                                }
+                            }
+                        }
+                        .image-upload-ui-left{
+                            .image-upload-label{
+                                &.image-added{
+                                    background-color: green;
+                                    &:before{
+                                        background-image: url('../images/ui/checkmark-white.svg');
+                                    }
+                                    &:hover{
+                                        background: darken(green, 5%);
+                                    }
+                                }
+                            }
+                        }
+                        .image-upload-ui-right{
+                            float: none;
+                            button.remove-image{
+                                display: none;
+                                background: $color-primary;
+                                &:before{
+                                    background-image: url('../images/ui/close-white.svg');
+                                }
+                                &:after{
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+                .image-upload-messages{
+                    padding: 0;
+                    border-bottom: 0;
+                    margin: 0 0 2rem;
+                    small{
+                        &:before{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        .g-recaptcha-error p{
+            margin: 2rem 0;
+            background: #1840A7;
+            color: white;
+            padding: 1rem;
+        }
+        .g-recaptcha > div{
+            margin: 1.5rem auto;
+        }
+        .site-button{
+            border-radius: 0;
+            border: 0;
+            background-color: $color-primary;
+            color: white;
+            padding: 1rem;
+            font: inherit;
+            cursor: pointer;
+            outline: inherit;
+            text-transform: uppercase;
+            text-align: center;
+            text-decoration: none;
+            letter-spacing: 1px;
+            display: block;
+            width: 100%;
+            max-width: 304px;
+            margin: auto;
+            margin-top: 1.5rem;
+            transition: background .25s ease-in-out, color .25s ease-in-out;
+            &:hover{
+                background: #eee;
+                color: $color-primary;
+            }
+            @media #{$bp-sm} {
+                padding: .75rem 1.5rem;
+            }
+        }
+    }
+}

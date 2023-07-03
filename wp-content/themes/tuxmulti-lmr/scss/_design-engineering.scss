@@ -1,0 +1,29 @@
+.site-design-engineering{
+    .site-tiles{
+        .site-tile{
+            &:nth-child(3n+3){
+                .site-tile-content{
+                    background: black;
+                    color: white;
+                    &:before{
+                        left: auto;
+                        right: 50%;
+                        margin-right: -2rem;
+                        border-width: 4rem 4rem 0 4rem;
+                        border-color: black transparent transparent transparent;
+                    }
+                }
+                @media #{$bp-sm} {
+                    .site-tile-content{
+                        &:before{
+                            margin-right: 0;
+                            right: -4rem;
+                            border-width: 4rem 0 4rem 4rem;
+                            border-color: transparent transparent transparent black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

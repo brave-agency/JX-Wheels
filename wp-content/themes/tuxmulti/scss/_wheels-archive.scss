@@ -1,0 +1,16 @@
+.site-wheels-archive{
+    #breadcrumbs{
+        background: $color-grey-light;
+        margin: 0;  
+        max-width: none;
+    }
+    .site-wheels-archive-info{
+        text-align: center;
+        padding: 2rem;
+        >h2,
+        >div{
+            max-width: 700px;
+            margin: 2rem auto;
+        }
+    }
+}

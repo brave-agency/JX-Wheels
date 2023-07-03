@@ -1,0 +1,248 @@
+.site-stockists{
+    opacity: 0;
+    visibility: hidden;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+    padding-top: 90px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: opacity .25s ease-in-out, visibility .25s ease-in-out;
+    &.opened{
+        opacity: 1;
+        visibility: visible;
+    }
+    .site-stockists-close{
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 2rem 1rem;
+        background-image: url('../images/ui/close.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 30px 30px;
+        span{
+            position: relative;
+            &:after{
+                content: 'Close';
+                font-size: 11px;
+                position: absolute;
+                top: 25px;
+                text-transform: uppercase;
+                font-weight: bold;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+    .site-title{
+        max-width: 500px;
+        font-size: 3.5rem;
+        text-transform: uppercase;
+        text-align: center;
+        @media #{$bp-md} {
+            flex-direction: row;
+            font-size: 5rem;
+        }
+    }
+    .site-stockists-form{
+        width: 100%;
+        max-width: 410px;
+        margin-bottom: 4rem;
+
+        .site-stockists-options{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: none;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+            li{
+                width: 50%;
+                margin: 0 0 1rem;
+                padding-right: 1rem;
+                line-height: 1.1;
+            }
+        }
+        .site-stockists-inputs{
+            >div{
+                @media #{$bp-sm} {
+                    margin-right: 1rem;
+                }
+            }
+        }
+        .site-stockists-postcode{
+            margin-bottom: 1rem;
+            ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                color: black;
+            }
+            ::-moz-placeholder { /* Firefox 19+ */
+                color: black;
+            }
+            :-ms-input-placeholder { /* IE 10+ */
+                color: black;
+            }
+            :-moz-placeholder { /* Firefox 18- */
+                color: black;
+            }
+            input{
+                width: 100%;
+                height:100%;
+                text-align: center;
+                color: black;
+                padding: .85rem 1.5rem;
+                text-transform: uppercase;
+                border-radius: 0;
+                border: 1px solid $color-grey-dark;
+            }
+        }
+        .site-stockists-distance{
+            margin-bottom: 1rem;
+            .selectric-wrapper,
+            .selectric-wrapper .selectric,
+            .selectric-wrapper .selectric .button {
+                height: 100%;
+            }
+            .selectric-wrapper .selectric .label{
+                padding-right: 44px;
+            }
+        }
+        .selectric{
+            border-color: $color-grey-dark;
+            .label{
+                background: white;
+                color: black;
+                text-align: center;
+            }
+            .button{
+                background: $color-grey-dark;
+                &:after{
+                    background-image: url('../images/ui/dropdown.svg');
+                }
+            }
+        }
+        .site-button{
+            width: 100%;
+            padding: .75rem 1.5rem;
+            @media #{$bp-sm} {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+    .site-stockists-list{
+        list-style: none;
+        padding: 0;
+        margin: 0 0 2rem;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        flex-wrap: wrap;
+        max-width: 1280px;
+        li{
+            width: 100%;
+            padding-bottom: 1rem;
+            @media #{$bp-md} {
+                width: 33.33%;
+                padding: .5rem;
+            }
+            div{
+                display: block;
+                border: 1px solid $color-primary;
+                padding: 1rem;
+                height: 100%;
+                h3{
+                    margin: 0 0 1rem;
+                }
+                p{
+                    margin: .25rem 0;
+                    a{
+                        color: $color-primary;
+                        text-decoration: none;
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.site-stockists-resultpage{
+        position: relative;
+        opacity: 1;
+        visibility: visible;
+        padding-top: 2rem;
+        .site-stockists-close{
+            display: none;
+        }
+        .site-stockists-options{
+            @media #{$bp-sm} {
+                flex-direction: row;
+                flex-wrap: initial;
+                li{
+                    margin: 0 1rem 1rem 0;
+                    &:last-of-type{
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+        .site-stockists-inputs{
+            @media #{$bp-sm} {
+                display: flex;
+                flex-direction: row;
+                >*{
+                    width: 33.33%;
+                }
+            }
+        }
+        .site-title{
+            max-width: 800px;
+            margin-bottom: 3rem;
+            font-size: 2.25rem;
+            @media #{$bp-md} {
+                font-size: 3.25rem;
+            }
+            @media #{$bp-xxlg} {
+                font-size: 3.75rem;
+            }
+        }
+        .site-stockists-form{
+            max-width: 800px;
+            .site-stockists-postcode{
+                @media #{$bp-sm} {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
+
+/*--------------------------------------------------------------
+## Admin bar related stylings
+--------------------------------------------------------------*/
+
+.admin-bar{
+    .site-stockists{
+        .site-stockists-close{
+            top: 46px;
+            @media only screen and (min-width: 783px) { //admin bar gets smaller on this breakpoint
+                top: 32px;
+            }
+        }
+    }
+}
