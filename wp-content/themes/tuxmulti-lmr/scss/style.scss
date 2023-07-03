@@ -79,10 +79,10 @@
 .ngg-breadcrumb {
   a {
     text-decoration: none;
-    color: #f28d1c;
+    color: $color-primary
   }
   a:visited {
-    color: #f28d1c;
+    color: $color-primary
   }
 }
 
@@ -371,4 +371,7 @@ ul.ngg-breadcrumbs {
   transition: 400ms transform;
 }
 
-body {overflow: scroll!important;}
+body {
+  overflow-y: scroll!important;
+  overflow-x: hidden;
+}

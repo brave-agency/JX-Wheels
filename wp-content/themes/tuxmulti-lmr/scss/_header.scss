@@ -8,7 +8,7 @@
     left: 0;
     right: 0;
     padding: 1rem 2rem;
-    background: rgba(0,0,0,0);
+    background: #fff;
     height: 90px;
     backface-visibility: hidden;
     border-bottom: 0;
@@ -18,12 +18,12 @@
     .site-logo{
         z-index: 1;
         position: relative;
-        height: 45px;
-        margin: 7px 0;
+        height: 55px;
+        margin: 2px 0;
         float: right;
         @media #{$bp-md} {
-            height: 70px;
-            margin: 10px 0;
+            height: 83px;
+            margin: 5px 0;
         }
         img{
             height: 100%;
@@ -89,7 +89,7 @@
             height: 120px;
         }
         &.toggled{
-            background: $color-primary;
+            background: #fff;
             z-index: 2;
             opacity: 1;
             visibility: visible;
@@ -230,10 +230,7 @@
                     &.current-menu-parent,
                     &.current-menu-item{
                         > a{
-                            color: white;
-                            @media #{$bp-md} {
-                                color: $color-primary;
-                            }
+                            color: $color-primary;
                         }
                     }
                     a{
@@ -243,7 +240,7 @@
                         font-size: 1.5rem;
                         cursor: pointer;
                         @media #{$bp-md} {
-                            color: white;
+                            color: black;
                             font-size: 1rem;
                         }
                         @media #{$bp-lg} {
@@ -268,7 +265,7 @@
                             align-items: center;
                             justify-content: center;
                             flex-direction: row;
-                            background: rgba(255,207,0,.975);
+                            background: $color-primary;
                             padding: 1rem 1.5rem;
                             height: auto;
                             margin: 1rem 0;
@@ -330,7 +327,7 @@
                             }
                             &.current-menu-item{
                                 > a{
-                                    color: white;
+                                    color: #ccc;
                                     font-weight: bold
                                 }
                             }
@@ -338,7 +335,7 @@
                                 text-transform: capitalize;
                                 font-size: 1.2rem;
                                 letter-spacing: 1px;
-                                color: black;
+                                color: white;
                             }
                         }
                     }
@@ -353,7 +350,7 @@
 .single-post,
 .page-template-find-a-stockist{
     .site-header{
-        background: rgba(0,0,0,1);
+        background: #fff;
         border-bottom: 0;
         transition: background .25s ease-in-out;
         &.scrolled{
