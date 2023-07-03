@@ -1,0 +1,39 @@
+/* -------------------------------------------------- */
+// Fonts
+/* -------------------------------------------------- */
+$font-text: 'montserrat', sans-serif;
+$font-text-alt: 'montserrat_medium', sans-serif;
+$font-heading: 'montserrat_medium', sans-serif;
+$font-title: 'montserrat_subrayada_regular', sans-serif;
+$font-title-bold: 'montserrat_subrayada_bold', sans-serif;
+
+/* -------------------------------------------------- */
+// Colors
+/* -------------------------------------------------- */
+$color-text: #404040;
+
+$color-primary: #BF0112;
+$color-secondary: black;
+
+$color-grey-dark: #373C40;
+$color-grey-light: #EFEFEF;
+
+// --------------------------------------------------
+// Breakpoints
+// --------------------------------------------------
+$bp-xxs: "(min-width: 400px)";
+$bp-xs: "(min-width: 480px)";
+$bp-sm: "(min-width: 768px)";
+$bp-md: "(min-width: 1024px)";
+$bp-lg: "(min-width: 1280px)";
+$bp-xlg: "(min-width: 1441px)";
+$bp-xxlg: "(min-width: 1701px)";
+//reverse
+$bp-xxs-r: "(max-width: 399px)";
+$bp-xs-r: "(max-width: 479px)";
+$bp-sm-r: "(max-width: 767px)";
+$bp-md-r: "(max-width: 1023px)";
+$bp-xlg-r: "(min-width: 1440px)";
+$bp-xxlg-r: "(min-width: 1700px)";
+//height
+$bp-xs-h: "(max-height: 480px)";

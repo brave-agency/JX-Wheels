@@ -1,0 +1,211 @@
+.site-tiles-title{
+    background: $color-grey-light;
+    padding: 2rem;
+    text-align: center;
+    h2{
+        margin: 0;
+    }
+}
+.site-tiles{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    &:before{
+        content: '';
+        z-index: 3;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        display: none;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 0 8rem 8rem;
+        border-color: transparent transparent #ffffff transparent;
+        @media #{$bp-sm} {
+            display: inline-block;
+        }
+        @media #{$bp-xxlg} {
+            border-width: 0 0 10rem 10rem;
+        }
+    }
+    .site-tile{
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        overflow: hidden;
+        transition: opacity .4s ease-in-out;
+        &:nth-of-type(even){
+            .site-tile-content{
+                background: $color-grey-dark;
+                color: white;
+                &:before{
+                    left: auto;
+                    right: 50%;
+                    margin-right: -2rem;
+                    border-width: 2rem 2rem 0 2rem;
+                    border-color: $color-grey-dark transparent transparent transparent;
+                }
+            }
+            @media #{$bp-sm} {
+                .site-tile-content{
+                    order: 2;
+                    &:before{
+                        right: auto;
+                        left: -4rem;
+                        border-width: 4rem 4rem 4rem 0;
+                        border-color: transparent $color-grey-dark transparent transparent;
+                    }
+                }
+                .site-tile-img,
+                .site-map{
+                    order: 1;
+                }
+            }
+        }
+        &:nth-child(4n+4){
+            .site-tile-content{
+                background: black;
+                color: white;
+                &:before{
+                    left: auto;
+                    right: 50%;
+                    margin-right: -2rem;
+                    border-width: 4rem 4rem 0 4rem;
+                    border-color: black transparent transparent transparent;
+                }
+            }
+            @media #{$bp-sm} {
+                .site-tile-content{
+                    &:before{
+                        right: auto;
+                        left: -4rem;
+                        border-width: 4rem 4rem 4rem 0;
+                        border-color: transparent black transparent transparent;
+                    }
+                }
+            }
+        }
+        &:hover{
+            .site-tile-img{
+                transform: scale3d(1.05,1.05,1);
+            }
+        }
+        &.fade{
+            opacity: .75;
+        }
+        .site-tile-content{
+            width: 100%;
+            position: relative;
+            background: white;
+            line-height: 1.75;
+            padding: 2rem;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            &:before{
+                content: '';
+                z-index: 3;
+                position: absolute;
+                right: 50%;
+                margin-right: -2rem;
+                bottom: -2rem;
+                display: inline-block;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 2rem 2rem 0 2rem;
+                border-color: white transparent transparent transparent;
+            }
+            @media #{$bp-sm} {
+                width: 50%;
+                text-align: left;
+                &:before{
+                    margin-right: 0;
+                    right: -4rem;
+                    bottom: auto;
+                    top: 50%;
+                    margin-top: -4rem;
+                    border-width: 4rem 0 4rem 4rem;
+                    border-color: transparent transparent transparent white;
+                }
+            }
+            @media #{$bp-lg} {
+                padding: 2rem 5%;
+            }
+            h2{
+                margin: 2rem 0;
+            }
+            h3{
+                text-transform: uppercase;
+                margin: 0 0 1.5rem;
+            }
+            ul{
+                padding: 0;
+                margin: 1rem 0 1.5rem;
+                list-style: none;
+                text-align: left;
+                &.split{
+                    @media #{$bp-sm} {
+                        column-count: 2;
+                    }
+                }
+                li{
+                    position: relative;
+                    padding-left: 30px;
+                    margin-bottom: .75rem;
+                    line-height: 1.5;
+                    &:before{
+                        content: '';
+                        display: block;
+                        width: 20px;
+                        height: 20px;
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+                        margin-top: -10px;
+                        background-image: url('../images/ui/checkmark.svg');
+                        background-size: 20px;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                    }
+                }
+            }
+            .site-intro{
+                margin-bottom: 2rem;
+            }
+            .site-button{
+                width: 100%;
+                @media #{$bp-sm} {
+                    width: 220px;
+                }
+            }
+        }
+        .site-tile-img,
+        .site-map{
+            width: 100%;
+            min-height: 300px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            transition: transform .4s ease-in-out;
+            @media #{$bp-sm} {
+                width: 50%;
+            }
+            @media #{$bp-md} {
+                min-height: 400px;
+            }
+            @media #{$bp-xxlg} {
+                min-height: 500px;
+            }
+        }
+    }
+    &.site-tiles-stockist{
+        &:before{
+            display: none;
+        }
+    }
+}

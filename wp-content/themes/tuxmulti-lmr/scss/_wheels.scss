@@ -1,0 +1,257 @@
+.site-wheels{
+    .site-wheels-filters{
+        background: $color-primary;
+        padding: 1.5rem 0;
+        button{
+            display: block;
+            width: 100%;
+            color: $color-secondary;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            margin: .5rem 0;
+            transition: margin .25s ease-in-out;
+            @media #{$bp-sm} {
+                display: none;
+            }
+            span{
+                position: relative;
+                top: 1px;
+                margin-left: 1rem;
+                display: inline-block;
+                background-image: url('../images/ui/dropdown-dark.svg');
+                background-position: center;
+                background-repeat: no-repeat;
+                width: 1.1rem;
+                height: 1.1rem;
+                transition: transform .25s ease-in-out;
+            }
+            &.toggled{
+                margin: .5rem 0 2rem;
+                span{
+                    transform: rotate(90deg);
+                }
+            }
+        }
+        >ul{
+            max-width: 1280px;
+            list-style: none;
+            padding: 0 1.5rem;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .25s ease-in-out;
+            @media #{$bp-sm} {
+                max-height: none;
+                overflow: visible;
+            }
+            &.toggled{
+                max-height: 300px;
+                overflow: visible;
+                li{
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+            >li{
+                width: 100%;
+                padding: .5rem;
+                opacity: 0;
+                visibility: 0;
+                transition: opacity .25s .125s ease-in-out, visibility .25s .125s ease-in-out;
+                @media #{$bp-sm} {
+                    opacity: 1;
+                    visibility: visible;
+                }
+                @media #{$bp-sm} {
+                    width: 50%;
+                }
+                @media #{$bp-md} {
+                    width: 25%;
+                }
+            }
+        }
+    }
+    .site-wheels-list{
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        padding: 2rem;
+        margin: auto;
+        max-width: 1280px;
+        text-align: center;
+        overflow: hidden;
+        transition: height .25s ease-in-out;
+        > li{
+            width: calc(100% - 4rem);
+            padding: 0 0 1rem;
+            @media #{$bp-sm} {
+                width: calc(50% - 2rem);
+                padding: 1rem;
+            }
+            @media #{$bp-lg} {
+                width: calc(25% - 1rem);
+            }
+            a.site-wheels-image{
+                display: block;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                height: 300px;
+                max-width: 300px;
+                margin: auto;
+            }
+            p{
+                margin: 0;
+                &.site-wheels-model{
+                    font-family: $font-text-alt;
+                    font-weight: 400;
+                    font-size: 1.5rem;
+                    letter-spacing: 2px;
+                }
+                &.site-wheels-price{
+                    color: $color-secondary;
+                    font-size: 2.75rem;
+                    font-family: $font-text-alt;
+                    span{
+                        font-size: 1.5rem;
+                        &:last-of-type{
+                            display: block;
+                            color: $color-grey-dark;
+                            text-transform: uppercase;
+                            font-size: 1rem;
+                            font-family: $font-text;
+                            font-weight: 400;
+                            font-family: $font-text;
+                        }
+                    }
+                }
+            }
+            .site-wheels-finishes{
+                display: flex;
+                list-style: none;
+                padding: 0;
+                margin: 1rem 0;
+                align-items: center;
+                justify-content: center;
+                li{
+                    width: 30px;
+                    height: 30px;
+                    margin: 0 .15rem;
+                    &:first-of-type{
+                        width: auto;
+                        line-height: 30px;
+                        height: auto;
+                        padding-right: .5rem;
+                    }
+                }
+            }
+            a.site-button{
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+    .site-wheels-info{
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden;
+        &:hover{
+            .site-wheels-info-image > div{
+                transform: scale3d(1.05,1.05,1);
+            }
+        }
+        .site-wheels-info-details{
+            position: relative;
+            width: 100%;
+            padding: 0 2rem 2rem;
+            background: black;
+            display: flex;
+            color: white;
+            flex-direction: column;
+            justify-content: center;
+            z-index: 3;
+            text-align: center;
+            @media #{$bp-sm} {
+                text-align: left;
+                width: 45%;
+                padding: 2rem 2rem 4rem;
+                padding-left: calc(50% - 640px);
+            }
+            .site-wheels-info-title{
+                font-size: 3.25rem;
+                margin: 0 0 2rem;
+                padding-left: 2rem;
+                position: relative;
+                margin-top: -50px;
+                line-height: .8;
+                @media #{$bp-sm} {
+                    margin-top: 2rem;
+                    font-size: 6rem;
+                }
+                @media #{$bp-md} {
+                    margin-top: 2rem;
+                    font-size: 7.5rem;
+                }
+                span{
+                    display: block;
+                    color: $color-primary;
+                    font-weight: 200;
+                }
+            }
+            .site-wheels-info-text{
+                font-size: 1.1rem;
+                font-weight: bold;
+                position: relative;
+                @media #{$bp-sm} {
+                    padding-left: 2rem;
+                    margin-right: -5rem;
+                }
+            }
+        }
+        .site-wheels-info-image{
+            position: relative;
+            width: 100%;
+            min-height: 300px;
+            overflow: hidden;
+            &:before{
+                content: '';
+                z-index: 2;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+                background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
+                background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 );
+            }
+            @media #{$bp-sm} {
+                width: 55%;
+                order: 2;
+                &:before{
+                    background: -moz-linear-gradient(left, rgba(0,0,0,1) 5%, rgba(0,0,0,0) 100%);
+                    background: -webkit-linear-gradient(left, rgba(0,0,0,1) 5%,rgba(0,0,0,0) 100%);
+                    background: linear-gradient(to right, rgba(0,0,0,1) 5%,rgba(0,0,0,0) 100%);
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=1 );
+                }
+            }
+            > div{
+                height: 100%;
+                min-height: 300px;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                transition: transform .4s ease-in-out;
+                @media #{$bp-lg} {
+                    min-height: 500px;
+                }
+            }
+        }
+    }
+}

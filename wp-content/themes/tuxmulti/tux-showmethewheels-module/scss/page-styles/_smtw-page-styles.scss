@@ -1,0 +1,932 @@
+/* ---------------------------------------------------- */
+/* **************************************************** */
+/*	Competition page styles */
+/* **************************************************** */
+/* ---------------------------------------------------- */
+/*	
+	-,-) Variables
+	-.-) Buttons
+	-.-) Content sections
+	-.-) Tux article
+	-.-) Page header / slider
+	-.-) Competition overview section
+	-.-) Competition submit feedback message
+	-.-) Entry form
+	-.-) Modals
+	-.-) Server messages
+*/
+
+
+#show-me-the-wheels {
+	
+
+	// Variables
+	// ----------------------------------------------------
+	$brand-font: 'Open Sans', Helvetica, Roboto, Arial, sans-serif;
+	$body-text-color: #333;
+	$brand-red: #d60000;
+	$dq-dark-grey: #333;
+	
+
+	// Buttons 
+	// ----------------------------------------------------
+	.tux-button {
+		width: 100%;
+		margin: 10px 0 0 0;
+		padding: 12px 20px;
+		color: #fff;
+		font-family: $brand-font;
+		text-transform: uppercase;
+		border: none;
+		background-color: $brand-red;
+		text-align: center;
+		transition: background-color ease 0.3s;
+
+		// At viewports 600px up set button width
+		@media only screen and (min-width:37.5em) {
+			width: 300px;
+		}
+		
+		&:hover, 
+		&:active {
+			background-color: #000;
+			color: #fff;
+		}
+
+		&:focus {
+			outline: none;
+			color: #fff;
+		}
+	}
+
+	// Button centered wrapper
+	.btn-center {
+		text-align: center;
+	}
+	
+	// Content sections
+	// ----------------------------------------------------
+	.content-section {
+
+		padding-top: 20px;
+		padding-bottom: 20px;
+		
+		// Section rule
+		&:after {
+			content: "";
+			display: block;
+			max-width: 1140px;
+			height: 1px;
+			background-color: #eee;
+			margin-top: 40px;
+		}
+
+		&:last-of-type {
+
+			// Add bottom margin
+			margin-bottom: 20px;
+			
+			// Remove line break	
+			&:after {
+				content: none;
+			}
+		}
+
+		// Remove row margin
+		.row {
+			margin-bottom: 0;
+		}
+	}
+
+	// Tux article
+	// ----------------------------------------------------
+	.tux-article {
+
+		// Main header
+		.tux-article-header {
+			font-family: $brand-font;
+			text-transform: uppercase;
+			font-weight: 300;
+			color: $body-text-color;
+			text-align: center;
+			margin-bottom: 24px;
+		}
+
+		// Sub title
+		.article-sub-title {
+			font-family: $brand-font;
+			text-transform: uppercase;
+			font-weight: 600;
+			color: $body-text-color;
+			margin-bottom: 6px;
+			font-size: 16px;
+			line-height: 1.6;
+		}
+
+		p {
+			font-family: $brand-font;
+			font-size: 14px;
+			color: $body-text-color;
+			line-height: 1.6;
+			margin-bottom: 20px;
+			text-align: justify;
+		}
+
+		// Article lead
+		p.article-lead {
+			font-family: $brand-font;
+			font-size: 16px;
+			color: $body-text-color;
+			line-height: 1.6;
+			margin-bottom: 20px;
+			text-align: justify;
+
+			// Increase font size on vieports above 600px
+			@media only screen and (min-width:37.5em) { 
+				font-size: 18px;
+			}
+		}
+
+		// Lists
+		ul, ol {
+			list-style-type: disc;
+			list-style-position: inside;
+			margin-bottom: 20px;
+
+			li {
+				font-family: $brand-font;
+				font-size: 14px;
+				color: $body-text-color;
+				line-height: 1.6;
+			}
+		}
+
+		ol {
+			list-style-type: decimal;
+		}
+
+		// Remove any bottom margin on the last child
+		*:last-child {
+			margin-bottom: 0;
+		}
+
+
+		// Inline links
+		p > a,
+		li > a {
+			color: #d60000;
+			text-decoration: underline;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+		
+	}
+
+	// Page header / slider
+	// ----------------------------------------------------
+	.competition-header-section {
+
+		position:relative;
+		margin-bottom: 20px;
+
+		// Main title
+		.header-title {
+			margin: 0 auto;
+			display: block;
+			width: 100%;
+			box-sizing: border-box;
+			padding: 20px;
+			text-align: center;
+			background-color: rgba(#000, 1);
+			color: #fff;
+			font-family: $brand-font;
+			font-weight: 300;
+			font-size: 28px;
+			
+
+			// Modify for viewports
+			@media only screen and (min-width:62.125em) { 
+				z-index: 100;
+				position:absolute;
+				max-width: 600px;
+				left: 0;
+				right: 0;
+				top: 45%;
+				transform: translateY(-45%);
+				font-size: 40px;
+				background-color: rgba(#000, 0.7);
+			}
+
+			// Sub title
+			.header-sub-title {
+				display: block;
+				font-size: 18px;
+				color: #fff;
+				margin-top: 10px;
+
+				// Modify for viewports
+				@media only screen and (min-width:62.125em) { 
+					font-size: 24px;
+					color: #ccc;
+				}
+			}
+
+		}
+
+		// Slider
+		#slide-wrapper {
+			margin-bottom: 0;
+
+			// Make images width 100%
+			.img-responsive {
+				width: 100%;
+			}
+		}
+
+	}
+
+	// Competition overview section
+	// ----------------------------------------------------
+	.competition-overview-section {
+		
+		.article-main {	
+			// Add two col body text on large up viewports
+			@media only screen and (min-width:62.125em) {
+
+				column-count: 2;
+				column-gap: 30px;
+
+			} 
+		}
+
+	}
+
+	// Competition submit feedback message
+	// ----------------------------------------------------
+	#competition-submit-feedback {
+
+		// Set to display none, we'll show this if the form has been successfully submitted
+		display:none;
+		margin-bottom: 20px;
+
+		&:after {
+			content:none;
+		}
+
+		p {
+			text-align: center;
+		}
+
+		.fb-button {
+			@extend .tux-button;
+			background-color: #3b5998;
+			display: inline-block;
+			margin-top: 5px;
+			padding: 15px 20px;
+			width: auto;
+
+			&:before {
+				content: '\f09a';
+				margin-right: 10px;
+				font-family: 'fontawesome';
+			}
+		}
+
+		.fb-like {
+			margin-top: 10px;
+		}
+
+	}
+
+	// Entry form
+	// ----------------------------------------------------
+	#smtw-entry-form {
+
+		margin-top: 20px;
+
+		// Clearing of form groups on viewports greater than 992px
+		@media only screen and (min-width:62em) { 
+
+			.form-section > .form-group:nth-of-type(even) {
+				clear:none;
+			}
+
+		}
+
+		// Form section titles
+		.form-section-title {
+			font-family: $brand-font;
+			color: $body-text-color;
+			text-transform: uppercase;
+			font-weight: 600;
+			font-size: 22px;
+			margin-bottom: 20px;
+			border-bottom: 1px solid #eee;
+			padding-bottom: 20px;
+		}
+
+		// Form groups
+		.form-group {
+
+			// Label
+			.control-label {
+				font-family: $brand-font;
+				color: $body-text-color;
+				text-transform: uppercase;
+				font-weight: 600;
+				font-size: 14px;
+				margin-bottom: 10px;
+			}
+
+			// Required icon
+			.required {
+				&:after {
+					content: "*";
+					color: $brand-red;
+					margin-left: 5px;
+				}
+			}
+
+			// Text & select inputs
+			input[type="text"],
+			select.form-control {
+				height: 50px;
+			}
+		}
+
+		// Radio entries
+		.radio {
+			line-height: 1.6;
+		}
+
+		// Checkboxes
+		.checkbox {
+			line-height: 1.6;
+			margin-top:0;
+
+			a {
+				color: $brand-red;
+				text-decoration: underline;
+
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+
+		// Submit button
+		.button-submit {
+			@extend .tux-button;
+			display: block;
+			margin: 0 0 20px 0;
+			width:100%;
+	
+			// Define our spin animation
+			@keyframes icon-spin {
+				0% {
+				-webkit-transform: rotate(0deg);
+				        transform: rotate(0deg);
+				}
+				100% {
+				-webkit-transform: rotate(359deg);
+				        transform: rotate(359deg);
+				}
+			}
+
+			// Re-style and animation during submission
+			&.submitting {
+
+				background-color: #c7c7c7;
+				cursor: default;
+
+				&:after {
+					content: "\f1ce";
+					font-family: 'fontawesome';
+					display: inline-block;
+					margin-left: 5px;
+					animation: icon-spin 1s infinite linear;
+				}
+			}
+			
+		}
+
+		// Competition question answer area
+		.competition-question-wrapper {
+
+			// Add bottom margin on all viewports except large
+			
+				*:last-child {
+					margin-bottom: 10px;
+				}
+
+		}
+
+		// Facebook share wrapper
+		#fb-share-wrapper {
+
+			// Helper text
+			.helper-text {
+				line-height: 1.6;
+				margin-bottom: 10px;
+			}
+
+			// Share button
+			#fb-share-button {
+				@extend .tux-button;
+				background-color: #3b5998;
+				margin-bottom: 20px;
+
+				// Add facebook logo
+				&:before {
+					content: '\f09a ';
+					font-family: 'fontawesome';
+					margin-right: 10px;
+				}
+			}
+		}
+
+		// Initially set competition submit to hidden
+		.competition-submit-wrapper {
+			
+			// Helper text
+			.helper-text {
+				line-height: 1.6;
+				margin-bottom: 20px;
+			}
+
+			// Competition terms
+			.competition-terms {
+				line-height: 1.6;
+				margin-bottom: 10px;
+
+				a {
+					color: $brand-red;
+					text-decoration: underline;
+
+					&:hover {
+						text-decoration: none;
+					}
+				}
+			}
+
+		}
+
+		// Submit legal helper text
+		.competition-submit-wrapper > .form-group.has-error {
+
+			.help-block {
+				font-weight: 600;
+			}
+			
+			label {
+				color: $body-text-color;
+			}
+
+		}
+
+	}
+
+	// Modals
+	// ----------------------------------------------------
+
+	// Global modal styling
+	.competition-modal {
+		
+		// Position and define background color
+		z-index: 100000;
+		background-color: rgba(#000, 0.8);
+
+		// Modal header
+		.modal-header {
+
+			padding-right: 40px;
+			
+			// Title
+			.modal-title {
+				font-family: $brand-font;
+				font-weight: 600;
+				color: $body-text-color;
+				text-transform: uppercase;
+				text-align: left;
+			}
+			
+			// Close icon	
+			.close {
+				position: absolute;
+				right: 13px;
+    			top: 18px;
+    			color: $brand-red;
+    			opacity: 1;
+
+    			&:hover {
+    				color: $body-text-color;
+    			}
+				
+				&:focus,
+    			&:active {
+    				outline: none;
+    			}
+			}
+
+		}
+
+		// Modal body
+		.modal-body {
+
+			.tux-article-header,
+			.article-sub-title {
+				text-align: left;
+			}
+		}
+
+		// Modal footer
+		.modal-footer {
+
+			// Close button
+			.tux-button {
+				width: auto;
+				margin-top: 0;
+			}
+
+		}
+	}
+
+	// Terms and conditions
+	// ----------------------------------------------------
+	.competition-terms {
+	
+		p {
+			font-size: 12px;
+		}
+
+		a{
+			color: $brand-red;
+			text-decoration: underline;
+		}
+	}
+
+	// Marketing preferences
+	// ----------------------------------------------------
+	.marketing-prefs {
+
+		input {
+			margin-right: 5px;
+		}
+
+		label {
+			font-size: 12px;
+			font-weight: normal;
+		}
+
+	}
+
+	// Server Messages
+	// ----------------------------------------------------
+	#server-messages {
+
+		// Initially set to display none, wil show using JS if we encounter errors
+		display: none;
+
+		margin-bottom: 20px;
+
+		.alert-message-container {
+
+			color: #fff;
+			background-color: $brand-red;
+			border-color: #b50000;
+			position: relative;
+
+			.alert-message-title {
+				font-weight: 600;
+				margin-bottom: 4px;
+
+				&:before {
+					content: '\f071 ';
+					font-family: 'fontawesome';
+					margin-right: 5px;
+					font-size: 15px;
+				}
+			}
+			
+			.alert-message-body {
+				line-height: 1.6;
+			}
+
+			.close {
+				position: absolute;
+				opacity: 1;
+				right: 10px;
+				top: 10px;
+
+				> span {
+					color: #fff;
+
+				}
+
+			}
+			
+		}
+		
+	}
+		
+	// IMAGE UPLOAD 
+	// --------------------------------------------
+	#image-uploader {
+		
+		margin-bottom:0px;
+
+		// Image upload messages
+		.image-upload-messages {
+
+			padding-bottom: 10px;
+			border-bottom: 1px solid #ccc;
+
+			small {
+				font-family:$brand-font;
+				font-size: 12px;
+				line-height:16px;
+
+				// Add warning triangle before
+				&:before {
+					content: '\f071';
+					font-family: 'fontawesome';
+					margin-right: 10px;
+				}
+			}
+		}
+	
+		// Image upload UI
+		.image-upload-ui-wrapper,
+		.image-upload-ui-template {
+
+		// Main wrapper
+		@include clearfix;
+		border-bottom: 1px solid #ccc;
+    	padding: {
+    		top:10px;
+    		bottom: 10px;
+    	}
+
+    	// Left wrap
+    	.image-upload-ui-left {
+
+    		float: left;
+    	}
+
+    	// Right wrap
+    	.image-upload-ui-right {
+
+    		float: right;
+    	}
+
+    	// Upload image input
+    	.image-upload-input-wrapper {
+
+    		// Wrapper styles
+
+    		// Hide the default input
+    		.image-upload-input {
+
+    			display:none;
+    		}
+
+    		// Style the label as our pseudo input element
+    		.image-upload-label {
+    			height: 50px;
+    			text-align: center;
+    			font-size: 14px;
+				font-weight: 500;
+	    		color: #fff;
+	    		background-color: $dq-dark-grey;
+	    		padding: 14px 15px;
+	    		border-radius: 4px;
+	    		text-transform: uppercase;
+	    		max-width: 240px;
+
+	    		// Increase size on large viewports
+				@media only screen and (min-width:47.9375em) {
+					max-width: 300px;
+				}
+
+				// Remove pointer events on label (for iOS bug)
+				.label-text {
+					pointer-events: none;
+				}
+
+	    		// Add upload icon
+	    		&:before {
+	    			font-size: 18px;
+	    			margin-right: 12px;
+	    			content: '\f093';
+	    			font-family: 'fontawesome';
+	    		}
+
+	    		&:focus,
+				&:active {
+					outline: none;
+				}
+
+	    		// Add hover styles
+	    		&:hover {
+					background-color: #888;
+					cursor:pointer;
+				}
+
+				// Update UI for when image is added
+				&.image-added {
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					background-color: #58805d;
+					cursor: default;
+
+					// Replace font awesome icon
+					&:before {
+						content: '\f00c';
+						margin-left: -5px;
+					}
+				}
+    		}
+    	}
+
+		
+		// Initially hide our error message
+    	.error-message {
+    		display: none;
+    	}
+
+    	// Add error state styles
+		&.error {
+
+			// Show our error block
+			.error-message {
+				display: block;
+				background-color: #cb7535;
+				color: #fff;
+				margin: {
+					top: -10px;
+					bottom: 10px;
+				}
+				padding: 5px 15px;
+
+				small {
+					font-size: 12px;
+					
+				}
+			}
+
+			// Update our image upload label
+			.image-upload-label {
+				background-color: #cb7535;
+
+				// Replace font awesome icon
+				&:before {
+					content: '\f00d';
+				}
+			}
+		}
+		
+		// Remove image button
+    	.remove-image {
+    		display: none;
+    		height: 50px;
+			margin: 0;
+			text-align: center;
+			font-size: 14px;
+			font-weight: 500;
+    		color: #fff;
+    		background-color: #a94a4a;
+    		padding: 10px 15px;
+    		border-radius: 4px;
+    		text-transform: uppercase;
+    		border:0px;
+
+    		// Initially hide our button text
+    		span {
+    			display: none;
+    		}
+
+    		// Add our button text at larger viewports
+    		@media only screen and (min-width:47.9375em) {
+
+    			span {
+    				display: inline-block;
+    			}
+
+    			&:after {
+    				margin-left: 12px;
+    			}
+
+    		}
+
+    		// Add font awesome trash icon
+    		&:after {
+    			font-size: 18px;
+    			content: '\f014';
+    			font-family: 'fontawesome';
+    		}
+
+    		&:focus,
+			&:active {
+				outline: none;
+			}
+
+    		// Add hover styles
+    		&:hover {
+				background-color: #888;
+			}
+    	}
+
+	}
+	
+	// Add extra image UI
+	.add-image-ui-wrapper {
+
+		// Wrapper
+		margin-top: 20px;
+		text-align: right;
+
+		.add-extra-img {
+			margin: 0;
+			padding: 10px 15px;
+			border-radius: 4px;
+			background-color: $dq-dark-grey;
+			text-transform: uppercase;
+
+			&:hover {
+				background-color: #888;
+			}
+
+			&:focus,
+			&:active {
+				outline: none;
+			}
+
+			// Add plus icon
+			&:after {
+				content: '\f067';
+				font-family: 'fontawesome';
+				margin-left: 12px;
+			}
+		}
+	}
+
+	// Hide the template that we'll clone with JS
+	.image-upload-ui-template {
+		display: none;
+	}
+	
+
+}
+
+// Blue Imp Gallery
+	// ----------------------------------------------------
+	.smtw-gallery {
+		
+		.links{
+			 
+			.img-responsive{
+			margin:10% auto 5%;
+			position: relative;
+			display: block;
+			}
+		
+			.caption{
+			font-size: 100%!important;
+			line-height: 125%;
+			font-weight: 600;
+			text-align: center;
+			display: block;
+			min-height: 75px;
+			clear: both;
+			}
+		
+		}
+		
+	}
+	
+	// Add margin top to entire gallery on mobile
+    @media only screen and (max-width:47.9375em) {
+	    .smtw-gallery{
+		    margin-top:10%;
+	    	}
+	    }
+	
+	.smtw-submit-feedback{
+		
+		background: #58805E;
+		display: none;
+		border-radius: 5px;
+		padding: 10px 25px;
+		color: #fff;
+		margin-top:4%;
+		
+			p{
+			margin-bottom:0px!important;}
+			}
+		
+		}
+
+	

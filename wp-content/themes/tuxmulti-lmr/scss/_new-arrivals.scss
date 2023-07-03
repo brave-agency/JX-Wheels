@@ -1,0 +1,170 @@
+.site-newarrivals{
+    padding: 2rem 1rem;
+    max-width: 1280px;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    @media #{$bp-sm} {
+        display: block;
+        align-items: center;
+    }
+    .site-newarrivals-intro{
+        text-align: center;
+        padding: 0 1rem;
+        @media #{$bp-sm} {
+            text-align: center;
+            min-width: auto;
+            width: 100%;
+        }
+        h2.site-title{
+            font-size: 2.5rem;
+            @media #{$bp-md} {
+                font-size: 3.5rem;
+            }
+            @media #{$bp-xxlg} {
+                font-size: 2.5rem;
+            }
+        }
+        .site-newarrivals-text{
+            max-width: 700px;
+            margin: 2rem auto;
+        }
+    }
+    .site-newarrivals-list{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 44px;
+        margin: auto;
+        max-width: 1280px;
+        text-align: center;
+        overflow: hidden;
+        transition: height .25s ease-in-out;
+        @media #{$bp-sm} {
+            padding: 0 88px;
+        }
+        .site-newarrivals-item{
+            width: calc(100% - 2rem);
+            margin: 1rem;
+            a.site-newarrivals-image{
+                display: block;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                height: 200px;
+                max-width: 200px;
+                margin: auto;
+            }
+            p{
+                margin: 0;
+                &.site-newarrivals-model{
+                    font-family: $font-text-alt;
+                    font-weight: 400;
+                    font-size: 1.25rem;
+                    letter-spacing: 2px;
+                }
+                &.site-newarrivals-price{
+                    color: $color-secondary;
+                    font-size: 2.75rem;
+                    font-family: $font-text-alt;
+                    span{
+                        font-size: 1.25rem;
+                        &:last-of-type{
+                            display: block;
+                            color: $color-grey-dark;
+                            text-transform: uppercase;
+                            font-size: .9rem;
+                            font-family: $font-text;
+                            font-weight: 400;
+                            font-family: $font-text;
+                        }
+                    }
+                }
+            }
+            .site-newarrivals-finishes{
+                display: flex;
+                list-style: none;
+                padding: 0;
+                margin: 1rem 0;
+                align-items: center;
+                justify-content: center;
+                li{
+                    width: 25px;
+                    height: 25px;
+                    margin: 0 .15rem;
+                    &:first-of-type{
+                        width: auto;
+                        line-height: 25px;
+                        height: auto;
+                        padding-right: .5rem;
+                    }
+                }
+            }
+            a.site-button{
+                width: 100%;
+                max-width: calc(300px - 3rem);
+                margin-bottom: .25rem;
+            }
+        }
+    }
+    .site-newarrivals-more{
+        margin: 1rem auto 2rem;
+        width: 100%;
+        color: $color-primary;
+        max-width: calc(350px - 3rem);
+        @media #{$bp-sm} {
+            margin: 2rem auto;
+        }
+        @media #{$bp-xxlg} {
+            max-width: calc(400px - 3rem);
+        }
+    }
+    .site-newarrivals-arrows{
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        margin-top: -22px;
+        right: 2rem;
+        left: 2rem;
+        .site-newarrivals-arrow{
+            position: absolute;
+            z-index: 101;
+        }
+        .site-newarrivals-prev{
+            left: 0;
+        }
+        .site-newarrivals-next{
+            right: 0;
+        }
+        &-mobile{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @media #{$bp-sm} {
+                display: none;
+            }
+        }
+        button{
+            display: inline-block;
+            width: 44px;
+            height: 44px;
+            margin: 0 .25rem;
+            border: 1px solid $color-primary;
+            background: $color-primary;
+            transition: background .25s ease-in-out;
+            background-size: 12px;
+            background-repeat: no-repeat;
+            background-position: center;
+            cursor: pointer;
+            &.site-newarrivals-prev{
+                background-image: url('../images/ui/arrow-left.svg');
+            }
+            &.site-newarrivals-next{
+                background-image: url('../images/ui/arrow-right.svg');
+            }
+            &:hover{
+                background-color: $color-primary;
+            }
+        }
+    }
+}

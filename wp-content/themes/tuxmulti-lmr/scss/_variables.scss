@@ -1,0 +1,40 @@
+/* -------------------------------------------------- */
+// Fonts
+/* -------------------------------------------------- */
+$font-text: 'Helvetica Neue', sans-serif;
+$font-text-alt: 'Exo 2', sans-serif;
+$font-heading: 'Exo 2', sans-serif;
+$font-title: 'Exo 2', sans-serif;
+$font-title-bold: 'Exo 2', sans-serif;
+
+/* -------------------------------------------------- */
+// Colors
+/* -------------------------------------------------- */
+$color-text: #404040;
+
+$color-primary: #FFCF00;
+$color-secondary: black;
+
+$color-grey-dark: #373C40;
+$color-grey-medium: #525252;
+$color-grey-light: #EEEEEE;
+
+// --------------------------------------------------
+// Breakpoints
+// --------------------------------------------------
+$bp-xxs: "(min-width: 400px)";
+$bp-xs: "(min-width: 480px)";
+$bp-sm: "(min-width: 768px)";
+$bp-md: "(min-width: 1024px)";
+$bp-lg: "(min-width: 1280px)";
+$bp-xlg: "(min-width: 1441px)";
+$bp-xxlg: "(min-width: 1701px)";
+//reverse
+$bp-xxs-r: "(max-width: 399px)";
+$bp-xs-r: "(max-width: 479px)";
+$bp-sm-r: "(max-width: 767px)";
+$bp-md-r: "(max-width: 1023px)";
+$bp-xlg-r: "(max-width: 1440px)";
+$bp-xxlg-r: "(max-width: 1700px)";
+//height
+$bp-xs-h: "(max-height: 480px)";

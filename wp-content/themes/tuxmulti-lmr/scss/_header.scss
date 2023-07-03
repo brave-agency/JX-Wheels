@@ -1,0 +1,390 @@
+/*--------------------------------------------------------------
+## Header
+--------------------------------------------------------------*/
+.site-header{
+    z-index: 1001;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem 2rem;
+    background: rgba(0,0,0,0);
+    height: 90px;
+    backface-visibility: hidden;
+    border-bottom: 0;
+    @media #{$bp-md} {
+        height: 120px;
+    }
+    .site-logo{
+        z-index: 1;
+        position: relative;
+        height: 45px;
+        margin: 7px 0;
+        float: right;
+        @media #{$bp-md} {
+            height: 70px;
+            margin: 10px 0;
+        }
+        img{
+            height: 100%;
+        }
+    }
+    .menu-toggle-lmr {
+        border: 0;
+        width: 30px;
+        height: 30px;
+        margin: 2rem 2rem;
+        cursor: pointer;
+        position: absolute;
+        left: 0;
+        top: 0;
+        @media #{$bp-md} {
+            display: none;
+        }
+        > div{
+            width: 48px;
+            display: flex;
+            span{
+                display: block;
+                margin-right: 6px;
+                width: 10px;
+                height: 15px;
+                background: $color-primary;
+                transform: skewX(-45deg);
+                transition: transform .5s ease-in-out, background .5s ease-in-out;
+            }
+        }
+        &.toggled {
+            z-index: 3;
+            > div{
+                span{
+                    background: $color-secondary;
+                    transform: skewX(45deg);
+                }
+            }
+        }
+    }
+    .main-navigation{
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        text-align: center;
+        display: flex;
+        padding-top: 90px;
+        opacity: 0;
+        font-family: $font-text-alt;
+        visibility: hidden;
+        transition: background .5s ease-in-out, opacity .5s ease-in-out, visibility .5s ease-in-out;
+        @media #{$bp-md} {
+            display: block;
+            z-index: 2;
+            opacity: 1;
+            visibility: visible;
+            padding-top: 0;
+            left: 1rem;
+            right: auto;
+            bottom: auto;
+            height: 120px;
+        }
+        &.toggled{
+            background: $color-primary;
+            z-index: 2;
+            opacity: 1;
+            visibility: visible;
+            @media #{$bp-md} {
+                background: transparent;
+            }
+            .main-navigation-inner{
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .main-navigation-inner{
+            width: 100%;
+            opacity: 0;
+            transform: translateY(-20%);
+            transition: transform .35s ease-in-out, opacity .35s ease-in-out;
+            @media #{$bp-md} {
+                transform: translateY(0);
+                opacity: 1;
+                height: inherit;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+            }
+            .menu-logo{
+                display: block;
+                height: 70px;
+                margin: 0 0 2rem;
+                @media #{$bp-sm} {
+                    height: 100px;
+                }
+                @media #{$bp-md} {
+                    display: none;
+                }
+                @media #{$bp-xs-h} {
+                    display: none;
+                }
+                img{
+                    height: 100%;
+                }
+            }
+            ul{
+                padding: 0;
+                margin: auto;
+                list-style: none;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                flex-wrap: wrap;
+                overflow-y: auto;
+                max-height: calc(100vh - 120px - 7rem); //minus height of logo, close button (margins included)
+                @media #{$bp-xs-h} {
+                    max-height: calc(100vh - 7rem);
+                }
+                @media #{$bp-md} {
+                    height: 90px;
+                    justify-content: flex-end;
+                    overflow: visible;
+                }
+                li{
+                    width: 100%;
+                    position: relative;
+                    margin: .5rem 0;
+                    padding: 0 .75rem;
+                    @media #{$bp-md} {
+                        display: inline-block;
+                        width: auto;
+                    }
+                    &:last-of-type{
+                        margin-bottom: 1.5rem;
+                        @media #{$bp-md} {
+                            margin-bottom: .5rem;
+                        }
+                    }
+                    &.menu-item-has-children{
+                        &:after{
+                            content: '';
+                            position: absolute;
+                            top: 5px;
+                            right: 2rem;
+                            display: inline-block;
+                            background-image: url('../images/ui/dropdown-dark.svg');
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: 15px 15px;
+                            width: 15px;
+                            height: 15px;
+                            transition: transform .25s ease-in-out;
+                            @media #{$bp-md} {
+                                top: 100%;
+                                right: 50%;
+                                margin-right: -7px;
+                                background-image: url('../images/ui/dropdown.svg');
+                            }
+                        }
+                        &.toggled{
+                            &:after{
+                                transform: rotate(180deg);
+                            }
+                            ul.sub-menu{
+                                max-height: 120px;
+                                margin: 1rem 0;
+                                opacity: 1;
+                                visibility: visible;
+                                @media #{$bp-xxs} {
+                                    max-height: 250px;
+                                    
+                                }
+                                @media #{$bp-md} {
+                                    max-height: none;
+                                    overflow: visible;
+                                }
+                            }
+                        }
+                        &:hover{
+                            @media #{$bp-md} {
+                                &:after{
+                                    transform: rotate(180deg);
+                                }
+                                ul.sub-menu{
+                                    max-height: 120px;
+                                    margin: 1rem 0;
+                                    opacity: 1;
+                                    visibility: visible;
+                                    @media #{$bp-xxs} {
+                                        max-height: 250px;
+                                        
+                                    }
+                                    @media #{$bp-md} {
+                                        max-height: none;
+                                        overflow: visible;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.current-menu-parent,
+                    &.current-menu-item{
+                        > a{
+                            color: white;
+                            @media #{$bp-md} {
+                                color: $color-primary;
+                            }
+                        }
+                    }
+                    a{
+                        color: black;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        font-size: 1.5rem;
+                        cursor: pointer;
+                        @media #{$bp-md} {
+                            color: white;
+                            font-size: 1rem;
+                        }
+                        @media #{$bp-lg} {
+                            font-size: 1.25rem;
+                        }
+                    }
+                    ul.sub-menu{
+                        display: block;
+                        max-height: 0;
+                        overflow-y: auto;
+                        margin: 0;
+                        transition: max-height .5s ease-in-out, margin .5s ease-in-out, opacity 0.25s ease-in-out, visibility .25s ease-in-out;
+                        @media #{$bp-md} {
+                            opacity: 0;
+                            visibility: hidden;
+                            position: absolute;
+                            top: 3.95rem;
+                            right: 50%;
+                            width: 240px;
+                            transform: translateX(50%);
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-direction: row;
+                            background: rgba(255,207,0,.975);
+                            padding: 1rem 1.5rem;
+                            height: auto;
+                            margin: 1rem 0;
+                            max-height: none;
+                            box-shadow: 0 1px 3px rgba(0,0,0,.25);
+                            &:before{
+                                content: '';
+                                position: absolute;
+                                top: -3.25rem;
+                                height: 3.25rem;
+                                left: 0;
+                                right: 0;
+                            }
+                        }
+                        @media #{$bp-xxlg} {
+                            top: 3.7rem;
+                            width: 300px;
+                        }
+                        li{
+                            margin: .25rem 0;
+                            @media #{$bp-xxs} {
+                                margin: .5rem 0;
+                            }
+                            @media #{$bp-sm} {
+                                margin: .75rem 0;
+                            }
+                            @media #{$bp-md} {
+                                padding: 0 1rem;
+                                &:after{
+                                    display: none;
+                                    opacity: 0;
+                                    content: '';
+                                    position: absolute;
+                                    top: 5px;
+                                    right: 2rem;
+                                    display: inline-block;
+                                    background-image: url('../images/ui/dropdown.svg');
+                                    background-position: center;
+                                    background-repeat: no-repeat;
+                                    background-size: 15px 15px;
+                                    width: 15px;
+                                    height: 15px;
+                                    transition: transform .25s ease-in-out, opacity .25s ease-in-out;
+                                    transform: rotate(180deg) translateY(-10px);
+                                    @media #{$bp-md} {
+                                        background-image: url('../images/ui/dropdown-dark.svg');
+                                        display: block;
+                                        top: 100%;
+                                        right: 50%;
+                                        margin-right: -7px;
+                                    }
+                                }
+                                &:hover{
+                                    &:after{
+                                        opacity: 1;
+                                        transform: rotate(180deg) translatey(0);
+                                    }
+                                }
+                            }
+                            &.current-menu-item{
+                                > a{
+                                    color: white;
+                                    font-weight: bold
+                                }
+                            }
+                            a{
+                                text-transform: capitalize;
+                                font-size: 1.2rem;
+                                letter-spacing: 1px;
+                                color: black;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.home,
+.single-wheel,
+.single-post,
+.page-template-find-a-stockist{
+    .site-header{
+        background: rgba(0,0,0,1);
+        border-bottom: 0;
+        transition: background .25s ease-in-out;
+        &.scrolled{
+            background: rgba(0,0,0,1);
+        }
+    }
+}
+
+/*--------------------------------------------------------------
+## Admin bar related stylings
+--------------------------------------------------------------*/
+#wpadminbar{
+    position: fixed !important;
+}
+.admin-bar{
+    .site-header,
+    .site-header .main-navigation{
+        top: 46px;
+        @media only screen and (min-width: 783px) {
+            top: 32px;
+        }
+    }
+    .site-header .main-navigation{
+        ul.nav-menu{
+            max-height: calc(100vh - 136px - 8rem);
+            @media #{$bp-sm} {
+                max-height: calc(100vh - 156px - 10rem);
+            }
+            @media only screen and (min-width: 783px) { //admin bar gets smaller on this breakpoint
+                max-height: calc(100vh - 142px - 10rem);
+            }
+        }
+    }
+}

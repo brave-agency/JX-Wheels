@@ -1,0 +1,47 @@
+button,
+input{
+    border-radius: 0;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    background: none;
+    font-family: $font-text-alt;
+}
+button.site-button,
+input.site-button,
+a.site-button{
+    border-radius: 0;
+    border: 0;
+    background-color: $color-primary;
+    color: black;
+    padding: .5rem 1rem;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: 1px solid transparent;
+    font-size: 1.25rem;
+    font-family: $font-text-alt;
+    transition: background .25s ease-in-out, color .25s ease-in-out, border-color .25s ease-in-out;
+    &:hover{
+        background-color: black;
+        color: $color-primary;
+        border-color: $color-primary;
+    }
+    @media #{$bp-sm} {
+        padding: .5rem 1.5rem;
+    }
+    &-alt{
+        background: $color-secondary;
+        color: $color-primary;
+        border-color: $color-grey-dark;
+        &:hover{
+            background: $color-primary;
+            color: black;
+            border-color: black;
+        }
+    }
+}

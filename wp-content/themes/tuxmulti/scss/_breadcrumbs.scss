@@ -1,0 +1,19 @@
+#breadcrumbs{
+    text-align: center;
+    padding: 2rem;
+    max-width: 1280px;
+    margin: auto;
+    position: relative;
+    span{
+        &.breadcrumb_last{
+            text-decoration: underline;
+        }
+        a{
+            color: $color-grey-dark;
+            text-decoration: none;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}

@@ -1,0 +1,62 @@
+ul.page-numbers {
+    list-style: none;
+    margin: 1rem 0;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    &:after {
+        content: ".";
+        display: block;
+        clear: both;
+        visibility: hidden;
+        line-height: 0;
+        height: 0;
+    }
+    li {
+        display: block;
+        text-align: center;
+        margin: .25rem;
+        a, span {
+            display: block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-decoration: none;
+            font-family: $font-text-alt;
+            font-weight: bold;
+            cursor: pointer;
+            border: 1px solid $color-primary;
+            color: $color-grey-dark;
+            transition: background .25s ease-in-out, color .25s ease-in-out, border .25s ease-in-out;
+            &:hover,
+            &.current,
+            &.current:hover{
+                color: white;
+                background: $color-primary;
+                border-color: $color-primary;
+            }
+            &.prev,
+            &.next{
+                background-size: .55rem;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            &.prev{
+                background-image: url('../images/ui/arrow-left.svg');
+                &:hover{
+                    background-image: url('../images/ui/arrow-left-white.svg');
+                }
+            }
+            &.next{
+                background-image: url('../images/ui/arrow-right.svg');
+                &:hover{
+                    background-image: url('../images/ui/arrow-right-white.svg');
+                }
+            }
+            span{
+                padding: 0;
+            }
+        }
+    }
+}

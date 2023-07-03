@@ -1,0 +1,70 @@
+html{
+    font-size: 14px;
+    @media #{$bp-xxlg} {
+        font-size: 15px;
+    }
+}
+
+body{
+    font-family: $font-text;
+    /* Font varient */
+    font-variant-ligatures: none;
+    -webkit-font-variant-ligatures: none;
+    /* Smoothing */
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+
+}
+
+
+h1,h2,h3,h4,h5,h6{
+    font-family: $font-heading;
+    font-weight: normal;
+    letter-spacing: 1px;
+    line-height: 1.25;
+    margin: 2rem auto;
+}
+
+h1{
+    font-size: 2.25rem;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+h3{
+    font-size: 1.75rem;
+}
+
+h4{
+    font-size: 1.5rem;
+}
+
+h5{
+    font-size: 1.25rem;
+}
+
+h6{
+    font-size: 1.25rem;
+}
+
+.site-title{
+    font-family: $font-title;
+    letter-spacing: 0;
+    font-size: 2.5rem;
+    line-height: 1;
+    @media #{$bp-md} {
+        font-size: 3.5rem;
+    }
+    @media #{$bp-xxlg} {
+        font-size: 4rem;
+    }
+}
+.site-title-bold{
+    font-family: $font-title-bold;
+    letter-spacing: 0;
+}
