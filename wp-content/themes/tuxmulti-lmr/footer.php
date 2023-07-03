@@ -98,13 +98,13 @@
 
 			</div>
 
-			<div class="site-instagram sdf" data-id="<?php echo $hashtag; echo get_field("instagram_access_token") ?>">
+			<!-- <div class="site-instagram sdf" data-id="<?php echo $hashtag; echo get_field("instagram_access_token") ?>">
 
 				<h2 class="site-instagram-title">
 					<a target="_blank" href="https://www.instagram.com/tags/<?php echo $hashtag ?>">#<?php echo $hashtag ?></a>
 				</h2>
 
-			</div>
+			</div> -->
 
 		</div>
 
