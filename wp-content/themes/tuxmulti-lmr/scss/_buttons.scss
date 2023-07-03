@@ -13,7 +13,7 @@ a.site-button{
     border-radius: 0;
     border: 0;
     background-color: $color-primary;
-    color: black;
+    color: white;
     padding: .5rem 1rem;
     font: inherit;
     cursor: pointer;
@@ -36,12 +36,17 @@ a.site-button{
     }
     &-alt{
         background: $color-secondary;
-        color: $color-primary;
+        color: white;
         border-color: $color-grey-dark;
         &:hover{
             background: $color-primary;
-            color: black;
-            border-color: black;
+            color: white;
+            border-color: $color-primary;
         }
     }
+}
+
+#mc-embedded-subscribe {
+    height: 42px !important;
+    color: #fff;
 }

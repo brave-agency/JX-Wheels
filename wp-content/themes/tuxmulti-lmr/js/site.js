@@ -203,9 +203,9 @@
         $(".carousel-arrow").css({"transform": "translateY(" + ($(this).scrollTop() / 10) + "px)"});
         $(".site-hero-desc").css({"transform": "translateY(" + ($(this).scrollTop() / -17.5) + "px)"});
         // $(".slick-dots").css({"transform": "translateY(" + ($(this).scrollTop() / -25) + "px)"});
-        if (!$(".home .site-header").length && !$(".page-template-find-a-stockist .site-header").length && !$(".single-wheel .site-header").length && !$(".single-post .site-header").length){
-            $(".site-header").css({"background": "rgba(0,0,0," + ($(this).scrollTop() / 300 * 1.25) + ")"});
-        }
+        // if (!$(".home .site-header").length && !$(".page-template-find-a-stockist .site-header").length && !$(".single-wheel .site-header").length && !$(".single-post .site-header").length){
+        //     $(".site-header").css({"background": "rgba(0,0,0," + ($(this).scrollTop() / 300 * 1.25) + ")"});
+        // }
     });
 
     //--------------------------------

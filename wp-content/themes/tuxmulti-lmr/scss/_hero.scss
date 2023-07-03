@@ -196,7 +196,7 @@
                 bottom: 0;
                 right: 0;
                 top: 0;
-                background: rgba(0,0,0,.75);
+                background: rgba(0,0,0,.5);
             }
             .site-hero-content{
                 position: relative;
@@ -259,7 +259,7 @@
     .site-hero-cover{
         height: calc(25vh - 90px); // minus header height
         @media #{$bp-md} {
-            height: calc(30vh - 120px);
+            height: calc(56vh - 120px);
         }
     }
     .site-hero-scrolldown{

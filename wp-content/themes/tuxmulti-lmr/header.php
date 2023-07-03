@@ -96,7 +96,7 @@ $myposts = get_posts( $args );
 
 		<nav id="site-navigation" class="main-navigation">
 			<div class="main-navigation-inner">
-				<a class="menu-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/ui/logo-dark.svg"></a>
+				<a class="menu-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/ui/logo-new.svg"></a>
 				<?php
 				wp_nav_menu( array(
 					'theme_location' => 'menu-1',
@@ -116,7 +116,7 @@ $myposts = get_posts( $args );
 
 		<div class="site-branding">
 		 
-			<a class="site-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/ui/logo.svg"></a>
+			<a class="site-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/ui/logo-new.svg"></a>
 
 		</div><!-- .site-branding -->
 
