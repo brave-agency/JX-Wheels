@@ -2,8 +2,8 @@
 Contributors: photocrati, imagely
 Tags: wordpress gallery plugin, gallery, nextgen, nextgen gallery, photo gallery, image gallery, photography, slideshow, images, photo, photo album, watermark
 Requires at least: 5.5.4
-Stable tag: 3.35
-Tested up to: 6.1.1
+Stable tag: 3.36
+Tested up to: 6.2
 License: GPLv3
 Requires PHP: 5.6
 
@@ -178,6 +178,13 @@ For more information, feel free to visit the official website for the NextGEN Ga
 
 
 == Changelog ==
+
+= V3.36  - 05.10.2023 =
+* NEW:     Added support for WP-Sweep so that NextGEN's tags will not be automatically removed.
+* NEW:     Added NextGEN Gallery images to RankMath SEO's sitemaps.
+* Fixed:   A JS error could trigger on the Manage Gallery page in some circumstances.
+* Fixed:   In some specific situations NextGEN Gallery could cause an infinite loop on all pages.
+* Fixed:   Manage Gallery's "Add Page" button used the legacy [nggallery] shortcode.
 
 = V3.35  - 02.03.2023 =
 * Fixed:   Sites still using PHP 5.6 experience a fatal error due to an incompatibility with the latest version of Composer.
