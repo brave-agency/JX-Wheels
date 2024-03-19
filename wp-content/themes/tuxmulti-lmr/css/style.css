@@ -1,5 +1,6 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Exo+2:200,300,400,500,600,700"); /* -------------------------------------------------- */
+@import url("https://fonts.googleapis.com/css?family=Exo+2:200,300,400,500,600,700");
+/* -------------------------------------------------- */
 /* -------------------------------------------------- */
 /* -------------------------------------------------- */
 /* -------------------------------------------------- */
@@ -911,6 +912,9 @@ a.site-button-alt:hover {
 }
 .site-footer .site-social li a.youtube {
   background-image: url("../images/social/youtube.svg");
+}
+.site-footer .site-social li a.tiktok {
+  background-image: url("../images/social/tiktok.svg");
 }
 .site-footer .site-links {
   display: -webkit-box;
@@ -2744,6 +2748,21 @@ ul.page-numbers li a span, ul.page-numbers li span span {
   width: 100%;
   max-width: calc(300px - 3rem);
 }
+.site-home .site-newarrivals {
+  max-width: 100%;
+}
+.site-home .site-newarrivals .site-newarrivals-list {
+  max-width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.site-home .site-newarrivals .site-newarrivals-more {
+  display: none !important;
+}
+.site-home .site-newarrivals-arrows {
+  display: none !important;
+}
 
 .site-newarrivals {
   padding: 2rem 1rem;
@@ -2956,6 +2975,7 @@ ul.page-numbers li a span, ul.page-numbers li span span {
 }
 
 .site-wheels .site-wheels-filters {
+  display: none !important;
   background: #ed3030;
   padding: 1.5rem 0;
 }

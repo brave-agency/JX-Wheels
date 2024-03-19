@@ -419,4 +419,17 @@
             max-width: calc(300px - 3rem);
         }
     }
+    .site-newarrivals {
+        max-width: 100%;
+        .site-newarrivals-list {
+            max-width: 100%;
+            justify-content: center;
+        }
+        .site-newarrivals-more {
+            display: none !important;
+        }
+    }
+    .site-newarrivals-arrows {
+        display: none !important;
+    }
 }

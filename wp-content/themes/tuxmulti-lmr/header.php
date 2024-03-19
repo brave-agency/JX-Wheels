@@ -116,7 +116,9 @@ $myposts = get_posts( $args );
 
 		<div class="site-branding">
 		 
-			<a class="site-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/ui/logo-new.svg"></a>
+			<a class="site-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+				<img src="<?php echo esc_url( wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'full' )[0] ); ?>">
+			</a>
 
 		</div><!-- .site-branding -->
 
@@ -125,7 +127,7 @@ $myposts = get_posts( $args );
 		<div class="site-stockists">
 			<button class="site-stockists-close"><span></span></button>
 
-			<h2 class="site-title">Find a Stockist</h2>
+			<h2 class="site-title">Where To Buy</h2>
 
 			<form class="site-stockists-form" action="/find-a-stockist/">
 				<ul class="site-stockists-options">
