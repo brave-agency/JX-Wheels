@@ -73,7 +73,7 @@ $myposts = get_posts( $args );
         <div class="site-stockists site-stockists-resultpage">
             <button class="site-stockists-close"></button>
 
-            <h2 class="site-title">Find a Stockist</h2>
+            <h2 class="site-title">Where To Buy</h2>
 
             <form class="site-stockists-form" action="/find-a-stockist/">
                 <ul class="site-stockists-options">

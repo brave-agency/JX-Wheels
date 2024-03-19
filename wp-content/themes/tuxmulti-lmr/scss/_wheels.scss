@@ -1,5 +1,7 @@
 .site-wheels{
     .site-wheels-filters{
+        // Client requested to hide the filters
+        display: none !important;
         background: $color-primary;
         padding: 1.5rem 0;
         button{

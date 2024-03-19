@@ -14,9 +14,9 @@
 	</div><!-- #content -->
 
 	<!-- Begin MailChimp Signup Form -->
-	<div id="mc_embed_signup hidden-xs hidden-sm" class="site-newsletter">
+<!-- 	<div id="mc_embed_signup hidden-xs hidden-sm" class="site-newsletter">
 		<div class="site-newsletter-inner">
-			<h2 class="site-newsletter-title"><?php the_field('newsletter_title', 'option'); ?></h2>
+			<h2 class="site-newsletter-title"><?php //the_field('newsletter_title', 'option'); ?></h2>
 
 			<form action="//tuxauto.us8.list-manage.com/subscribe/post-json?u=75f8a0416f6b7987e9fafee30&id=7d782fa2b7" method="get" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate="">
 				<div id="mc_embed_signup_scroll">
@@ -32,7 +32,7 @@
 				</div>
 			</form>
 		</div>
-	</div>
+	</div> -->
 
 	<!--End mc_embed_signup-->
 
@@ -53,7 +53,7 @@
 					<p class="site-info-bold"><?php the_field('contact_details_title', 'option'); ?></p>
 					<p>T: <?php the_field('contact_details_telephone', 'option'); ?></p>
 					<p>E: <?php the_field('contact_details_email', 'option'); ?></p>
-					<p>A: <?php the_field('contact_details_address', 'option'); ?></p>
+					<!-- <p>A: <?php //the_field('contact_details_address', 'option'); ?></p> -->
 				</div>
 				<?php
 					endif;
@@ -93,7 +93,7 @@
 
 				<div class="site-info site-copyright">
 					<p><?php the_field('copyright', 'option'); ?></p>
-					<p>Web Design & Development by <a href="https://www.brave.agency/" target="_blank">Brave Agency</a></p>
+					<!-- <p>Web Design & Development by <a href="https://www.brave.agency/" target="_blank">Brave Agency</a></p> -->
 				</div>
 
 			</div>
