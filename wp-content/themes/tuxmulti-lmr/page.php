@@ -9,10 +9,13 @@
  */
 
 get_header();
+global $post;
+$post_slug = $post->post_name;
+
 ?>
 
     <div id="primary" class="content-area">
-		<main id="main" class="site-main">
+		<main id="main" class="site-main <?php echo $post_slug; ?>">
 
         <div class="site-hero">
             <div class="site-hero-cover" data-parallax="scroll" data-image-src="<?php the_field('image'); ?>">
