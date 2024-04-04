@@ -3289,6 +3289,60 @@ ul.page-numbers li a span, ul.page-numbers li span span {
   }
 }
 
+ul.lk-social {
+  margin: 0 auto;
+  padding: 10px;
+}
+ul.lk-social li {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0 5px;
+}
+ul.lk-social li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justift-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #1F2064;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 3px solid #009FE3;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+ul.lk-social li a:hover {
+  background-color: #009FE3;
+  border: 3px solid #1F2064;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+ul.lk-social li a br {
+  display: none;
+}
+ul.lk-social li a svg {
+  width: 20px;
+  margin: 0 auto;
+}
+ul.lk-social li a svg path {
+  fill: #ffffff !important;
+}
+
+.site-stockists svg.lk {
+  opacity: 0;
+  -webkit-transition: all 0s ease;
+  transition: all 0s ease;
+}
+.site-stockists.opened svg.lk {
+  opacity: 1;
+  width: 450px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
 @media (min-width: 1024px) {
   .site-wheel #breadcrumbs {
     padding-left: calc(500px + 6rem);

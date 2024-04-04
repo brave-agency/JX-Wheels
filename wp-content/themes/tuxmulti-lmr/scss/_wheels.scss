@@ -257,3 +257,52 @@
         }
     }
 }
+
+
+ul.lk-social {
+    margin: 0 auto;
+    padding: 10px;
+    li {
+        display: inline-block;
+        list-style-type: none;
+        margin: 0 5px;
+        a {
+            display: flex;
+            justift-content: center;
+            align-items: center;
+            background-color: #1F2064;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            border: 3px solid #009FE3;
+            transition: all 0.2s ease;
+            &:hover {
+               background-color: #009FE3; 
+               border: 3px solid #1F2064;
+               transition: all 0.2s ease;
+            }
+            br {display: none;}
+            svg {
+                width: 20px;
+                margin: 0 auto;
+                path {
+                    fill: #ffffff !important;
+                }
+            }
+        }
+    }
+}
+
+.site-stockists {
+    svg.lk {
+        opacity: 0;
+        transition: all 0s ease;
+    }
+    &.opened {
+        svg.lk {
+            opacity: 1;
+            width: 450px;
+            transition: all 0.2s ease;
+        }
+    }
+}
