@@ -44,9 +44,9 @@ get_header();
             if( have_rows('tiles_content') ):
         ?>
         <div class="site-tiles-wrap">
-            <div class="site-tiles-title">
+<!--             <div class="site-tiles-title">
                 <h2>THE PROCESS</h2>
-            </div>
+            </div> -->
             <div class="site-tiles site-tiles-stockist">
                 <?php
                     while ( have_rows('tiles_content') ) : the_row();
