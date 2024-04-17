@@ -73,13 +73,6 @@ get_header();
                         <?php
                             endif;
                         ?>
-                        <?php
-                            if( have_rows('become_stockist', 'option') ):
-                        ?>
-                        <a class="site-button site-button-alt" href="<?php the_field('become_stockist_link', 'option'); ?>"><?php the_field('become_stockist_title', 'option'); ?></a>
-                        <?php
-                            endif;
-                        ?>
                     </div>
                     <div class="addthis_inline_share_toolbox"><span>Share</span></div>
                 </div>
