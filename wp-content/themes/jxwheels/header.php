@@ -106,7 +106,7 @@ $myposts = get_posts( $args );
 			</div>
 		</nav><!-- #site-navigation -->
 
-		<button class="menu-toggle-lmr">
+		<button class="menu-toggle-jx">
 			<div>
 				<span></span>
 				<span></span>
