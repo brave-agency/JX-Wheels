@@ -145,6 +145,9 @@ get_header();
 					while ( have_rows('about_more', 'option') ) : the_row();
 				?>
 				<div class="site-about-more">
+					<div class="site-about-more-image">
+						<div style="background-image: url(<?php the_sub_field('background', 'option'); ?>);"></div>
+					</div>
 					<div class="site-about-more-details">
 						<h2 class="site-title site-about-more-title"><?php the_sub_field('title', 'option'); ?></h2>
 						<div class="site-about-more-highlight"><?php the_sub_field('highlight', 'option'); ?></div>
