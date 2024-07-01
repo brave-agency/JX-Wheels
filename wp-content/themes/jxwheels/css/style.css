@@ -383,7 +383,7 @@ a.site-button-alt:hover {
 .site-header .site-logo img {
   height: 100%;
 }
-.site-header .menu-toggle-lmr {
+.site-header .menu-toggle-jx {
   border: 0;
   width: 30px;
   height: 30px;
@@ -394,17 +394,17 @@ a.site-button-alt:hover {
   top: 0;
 }
 @media (min-width: 1024px) {
-  .site-header .menu-toggle-lmr {
+  .site-header .menu-toggle-jx {
     display: none;
   }
 }
-.site-header .menu-toggle-lmr > div {
+.site-header .menu-toggle-jx > div {
   width: 48px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.site-header .menu-toggle-lmr > div span {
+.site-header .menu-toggle-jx > div span {
   display: block;
   margin-right: 6px;
   width: 10px;
@@ -417,10 +417,10 @@ a.site-button-alt:hover {
   transition: transform 0.5s ease-in-out, background 0.5s ease-in-out;
   transition: transform 0.5s ease-in-out, background 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
 }
-.site-header .menu-toggle-lmr.toggled {
+.site-header .menu-toggle-jx.toggled {
   z-index: 3;
 }
-.site-header .menu-toggle-lmr.toggled > div span {
+.site-header .menu-toggle-jx.toggled > div span {
   background: black;
   -webkit-transform: skewX(45deg);
           transform: skewX(45deg);

@@ -33,7 +33,7 @@ gulp.task('imagemin', function () {
 gulp.task('browser-sync', function() {
   browsersync.init({
   injectChanges: true,
-  proxy: 'http://dev.lmrwheels.builtbybrave.com/'
+  proxy: 'http://dev.jxwheels.builtbybrave.com/'
   });
 });
 

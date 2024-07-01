@@ -141,7 +141,7 @@
     //--------------------------------
     // MENU / NAVIGATION
     //--------------------------------
-    $('.menu-toggle-lmr').on('click', function(event){
+    $('.menu-toggle-jx').on('click', function(event){
 		event.preventDefault();
 		$(this).toggleClass('toggled');
 		$('.main-navigation').toggleClass('toggled');

@@ -80,7 +80,7 @@ $myposts = get_posts( $args );
 
                     <li>
                         <label class="checkbox">
-                            <input type="hidden" name="categories[]" value="lmr-wheels" checked />
+                            <input type="hidden" name="categories[]" value="jx-wheels" checked />
                         </label>
                     </li>
 
